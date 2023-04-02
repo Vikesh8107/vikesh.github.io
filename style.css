@@ -64,6 +64,13 @@ header {
 
 /* ////........Home Content........//// */
 
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .home-content .name {
   position: absolute;
   top: 47%;
@@ -77,21 +84,40 @@ header {
 .home-content .name h1 {
   font-size: 2.2rem;
   text-align: center;
+  margin-left: 250px; 
+  margin-top: 50px;
+  transition: all 0.3s ease;
 }
 
 .home-content .name p {
   color: #f0f0e6;
   font-size: 1.5rem;
+  margin-left: 250px; 
+}
+
+.home-content .responsive-img {
+  max-width: 100%;
+  /* height: auto; */
+  height: 550px;
+  width: 550px;
+  border-radius: 30px;
+  object-fit: contain;
+  margin-top: 130px;
+  /* max-width: 100%;
+  height: auto;
+  */
+  
 }
 
 .angle-down-icon {
   position: absolute;
-  bottom: 10%;
+  bottom: 1%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2rem;
   border: 3px solid #07374a;
   border-radius: 50%;
+  
 }
 
 .angle-down-icon a {
@@ -763,6 +789,12 @@ header {
   }
 }
 
+@media (max-width: 1104px) {
+	.home-content .responsive-img {
+		object-fit: contain;
+	}
+}
+
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
@@ -781,4 +813,21 @@ header {
 
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+}
+
+footer {
+	font-family: 'Poppins', sans-serif;
+}
+footer {
+	background: #111;
+	padding: 15px 23px;
+	color: #fff;
+	text-align: center;
+}
+footer span a {
+	color: crimson;
+	text-decoration: none;
+}
+footer span a:hover {
+	text-decoration: underline;
 }
